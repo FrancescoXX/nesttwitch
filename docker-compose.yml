@@ -1,0 +1,14 @@
+#docker compose file for nestjs
+version: "3"
+
+services:
+  nestjs:
+    container_name: nestjsapp
+    image: francescoxx/nesttwitch:1.0.0
+    # build:
+    #   context: ./
+    #   dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
